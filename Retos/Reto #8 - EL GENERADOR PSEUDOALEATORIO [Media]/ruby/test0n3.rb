@@ -14,4 +14,4 @@ class RandomNumberGenerator
   end
 end
 
-p "data: #{RandomNumberGenerator.new.gen_random_with_epoc}"
+p RandomNumberGenerator.new.gen_random_with_epoc
