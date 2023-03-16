@@ -22,7 +22,8 @@ class GetAPI
     # puts "title: #{@selected_title}, url: #{@selected_url}"
     uri = URI(@selected_url)
     res = Net::HTTP.get_response(uri)
-    puts @selected_title
+
+    puts "API name #{@selected_title}"
     puts res.body if res.is_a?(Net::HTTPSuccess)
   end
 
