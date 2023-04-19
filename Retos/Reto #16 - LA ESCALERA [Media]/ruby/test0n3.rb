@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 def stairs_generator(input)
-  stairs = downward_stairs(input.abs)
+  stairs = downward_stairs(input.abs) if input <= 0
 
-  stairs = upward_stairs(stairs) if input.positive?
+  # stairs = upward_stairs(stairs) if input.positive?
+  stairs = new_upward_stairs(input) if input.positive?
 
   stairs.join("\n")
 end
@@ -26,6 +27,18 @@ def upward_stairs(negative_stairs)
     item += ' ' * (max_string_length - item.length)
     item.reverse
   end
+end
+
+def new_upward_stairs(input)
+  max_string_length = 1 + 2 * input
+
+  stairs = ["#{' ' * (max_string_length - 1)}_"]
+  stair = 1
+  while stair <= input
+    stairs[stair] = "#{' ' * (max_string_length - (2 * stair + 1))}_|"
+    stair += 1
+  end
+  stairs
 end
 
 # puts stairs_generator(-5)
