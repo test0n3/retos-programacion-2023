@@ -15,9 +15,16 @@ class StairsTest < Minitest::Test
   end
 
   def test_stair_positive
-    # skip
+    skip
     input = 4
     expected = "        _\n      _| \n    _|   \n  _|     \n_|       "
+    assert_equal stairs_generator(input), expected
+  end
+
+  def test_new_stair_positive
+    # skip
+    input = 4
+    expected = "        _\n      _|\n    _|\n  _|\n_|"
     assert_equal stairs_generator(input), expected
   end
 
