@@ -36,5 +36,5 @@ class CellphoneDial
   end
 end
 
-puts "cellphone dial: #{CellphoneDial.new('6-666-88-777-33-3-33-888').translated}"
-puts "cellphone dial: #{CellphoneDial.new('6-99999999-0-8-33-777777777-8').translated}"
+# puts "cellphone dial: #{CellphoneDial.new('6-666-88-777-33-3-33-888').translated}"
+# puts "cellphone dial: #{CellphoneDial.new('6-99999999-0-8-33-777777777-8').translated}"
